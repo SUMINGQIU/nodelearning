@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 React 的基本使用</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="./node_modules/react/umd/react.development.js"></script>
+    <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+
+    <script>
+        //创建react(元素名称， 元素属性， 元素的子节点), 不友好。知道即可
+        // const title = React.createElement('p', null, 'Hello React')
+        const title = React.createElement(
+            'p', 
+            {title: '我是标题', id: 'p1'},
+            'Hello React'
+        )
+        //渲染ract(元素， 挂载点:渲染到的位置)
+        ReactDOM.render(title, document.getElementById('root'))
+    </script>
+</body>
+</html>
